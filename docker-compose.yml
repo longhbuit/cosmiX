@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cosmix_app
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: cosmix_db
+    environment:
+      MYSQL_DATABASE: cosmix_db
+      MYSQL_USER: cosmix_user
+      MYSQL_PASSWORD: cosmix_secret
+      MYSQL_ROOT_PASSWORD: cosmix_root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

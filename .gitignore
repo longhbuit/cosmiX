@@ -1,0 +1,42 @@
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Optional: Yarn / PNPM / NPM logs and caches
+.yarn/
+.pnp.*
+.npm/
+.pnpm-store/
+.cache/
+pnpm-debug.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# PHP / Laravel / Symfony / Composer
+vendor/
+composer.lock
+.env
+.phpunit.result.cache
+storage/*.key
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+
+# PhpStorm project files
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build artifacts (if any)
+public/storage
+public/hot
